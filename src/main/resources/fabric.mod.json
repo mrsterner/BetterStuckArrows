@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "better_stuck_arrows",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Better Stuck Arrows",
+  "description": "Makes arrows stuck to the player actually use the right texture",
   "authors": [
-    "Me!"
+    "MrSterner"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/mrsterner/better_stuck_arrows"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/better_stuck_arrows/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "dev.sterner.better_stuck_arrows.BetterStuckArrows"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "better_stuck_arrows.mixins.json"
   ],
 
   "depends": {
@@ -31,8 +31,5 @@
     "fabric-api": "*",
     "minecraft": "~1.19.4",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
