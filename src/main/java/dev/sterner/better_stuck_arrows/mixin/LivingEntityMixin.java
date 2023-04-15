@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class LivingEntityMixin {
 
     @Unique
-    private int better_stuck_arrows$stuckSpectralArrowTimer;
+    private int better_stuck_arrows$stuckSpectralArrowTimer = 0;
 
     @Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;getStuckArrowCount()I"))
     private void better_stuck_arrows$tick(CallbackInfo ci){
