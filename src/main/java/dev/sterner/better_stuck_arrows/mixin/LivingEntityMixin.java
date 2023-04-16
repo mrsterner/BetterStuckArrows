@@ -16,9 +16,9 @@ public class LivingEntityMixin {
     private int better_stuck_arrows$stuckSpectralArrowTimer;
 
     @Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;getStuckArrowCount()I"))
-    private void better_stuck_arrows$tick(CallbackInfo ci){
+    private void better_stuck_arrows$tick(CallbackInfo ci) {
         LivingEntity livingEntity = LivingEntity.class.cast(this);
-        if(livingEntity instanceof PlayerEntity player && player instanceof ISpectralArrow){
+        if (livingEntity instanceof PlayerEntity player && player instanceof ISpectralArrow) {
             int s = ((ISpectralArrow) player).getStuckSpectralArrowCount();
             if (s > 0) {
                 if (this.better_stuck_arrows$stuckSpectralArrowTimer <= 0) {

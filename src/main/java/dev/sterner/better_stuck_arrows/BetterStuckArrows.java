@@ -8,10 +8,10 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.player.PlayerEntity;
 
 public class BetterStuckArrows implements ModInitializer {
-	public static final TrackedData<Integer> STUCK_SPECTRAL_ARROW_COUNT = DataTracker.registerData(PlayerEntity.class, TrackedDataHandlerRegistry.INTEGER);
+    public static final TrackedData<Integer> STUCK_SPECTRAL_ARROW_COUNT = DataTracker.registerData(PlayerEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
-	@Override
-	public void onInitialize() {
+    @Override
+    public void onInitialize() {
 
-	}
+    }
 }

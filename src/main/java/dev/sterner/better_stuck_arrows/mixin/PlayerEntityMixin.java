@@ -19,7 +19,7 @@ public abstract class PlayerEntityMixin extends LivingEntity implements ISpectra
     }
 
     @Inject(method = "initDataTracker", at = @At("TAIL"))
-    private void betterStuckArrow$initDataTracker(CallbackInfo ci){
+    private void betterStuckArrow$initDataTracker(CallbackInfo ci) {
         this.dataTracker.startTracking(BetterStuckArrows.STUCK_SPECTRAL_ARROW_COUNT, 0);
     }
 

@@ -14,11 +14,11 @@ public class PersistentProjectileEntityMixin {
 
 
     @Redirect(method = "onEntityHit", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;setStuckArrowCount(I)V"))
-    private void better_stuck_arrows$onEntityHit(LivingEntity instance, int stuckArrowCount){
+    private void better_stuck_arrows$onEntityHit(LivingEntity instance, int stuckArrowCount) {
         PersistentProjectileEntity entity = PersistentProjectileEntity.class.cast(this);
-        if(entity instanceof SpectralArrowEntity && instance instanceof PlayerEntity player && player instanceof ISpectralArrow){
+        if (entity instanceof SpectralArrowEntity && instance instanceof PlayerEntity player && player instanceof ISpectralArrow) {
             ((ISpectralArrow) player).setStuckSpectralArrowCount(((ISpectralArrow) player).getStuckSpectralArrowCount() + 1);
-        }else{
+        } else {
             instance.setStuckArrowCount(instance.getStuckArrowCount() + 1);
         }
     }

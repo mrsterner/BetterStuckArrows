@@ -22,7 +22,7 @@ public abstract class PlayerEntityRendererMixin extends LivingEntityRenderer<Abs
     }
 
     @Inject(method = "<init>", at = @At("TAIL"))
-    private void better_stuck_arrows$init(EntityRendererFactory.Context ctx, boolean slim, CallbackInfo ci){
+    private void better_stuck_arrows$init(EntityRendererFactory.Context ctx, boolean slim, CallbackInfo ci) {
         addFeature(new StuckSpectralArrowsFeatureRenderer<>(ctx, this));
     }
 }
